@@ -1,0 +1,28 @@
+.socials {
+    display: inline-flex;
+}
+
+.social {
+    text-decoration: none;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+#discord {
+    color: #5865f2;
+}
+
+#github {
+    color: #000000;
+}
+
+#twitter {
+    color: #1da1f2;
+}
+
+#mastodon {
+    color: #563acc;
+}
