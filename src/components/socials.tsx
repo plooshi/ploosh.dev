@@ -46,7 +46,7 @@ export default function Socials() {
         <center>
             <Collapse title="Socials" css={{
                 fontFamily: "monospace",
-                width: "25%"
+                width: "250px"
             }} bordered={true} borderWeight={"normal"}>
                 <div className="socials">
                     <Social url="https://discord.com/users/716250356803174511" name="discord" icon={faBrands.faDiscord} />
