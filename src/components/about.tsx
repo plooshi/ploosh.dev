@@ -10,7 +10,7 @@ export default function About() {
                 <Text h2 id="title">Hey, I'm Ploosh!</Text>
                 </div>
                 <Text h4>An independent developer from the USA. My name is Tom, and I go by he/they.
-                I enjoy writing C, so most of my code is written in that.</Text>
+                I enjoy writing C, so most of my code is written in that. I have kind of a nerdy personality.</Text>
             </div>
         </center>
     )
