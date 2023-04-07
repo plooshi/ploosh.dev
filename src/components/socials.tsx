@@ -48,6 +48,7 @@ export default function Socials() {
                 fontFamily: "monospace",
                 width: "250px"
             }} bordered={true} borderWeight={"normal"}>
+                <Spacer y={0.5} />
                 <div className="socials">
                     <Social url="https://discord.com/users/716250356803174511" name="discord" icon={faBrands.faDiscord} />
                     <Spacer x={1} />
