@@ -3,6 +3,7 @@ import { createTheme, NextUIProvider } from '@nextui-org/react';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import "@/styles/socials.css"
 import "@/styles/about.css"
+import "@/styles/projects.css"
 
 const theme = createTheme({
     type: 'dark',

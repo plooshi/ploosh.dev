@@ -63,7 +63,7 @@ export default function Projects() {
         <center>
             <h3>Projects</h3>
             <div className="projects">
-                <Button.Group color="primary" bordered>
+                <Button.Group color="primary" bordered className="projects_group">
                     <Project name="palera1n" />
                     <Spacer x={1} />
                     <Project name="Dyld64Patcher" />
