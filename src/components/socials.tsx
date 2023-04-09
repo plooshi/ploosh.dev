@@ -13,6 +13,7 @@ function getInnerIcon(event: React.MouseEvent): Element {
 
     return innerIcon;
 }
+
 function enableBounce(event: React.MouseEvent): void {
     event.preventDefault();
     
