@@ -61,7 +61,7 @@ function Project(props: ProjectProps) {
 export default function Projects() {
     return (
         <center>
-            <h3>Projects</h3>
+            <Text h3 id="projects_title">Projects</Text>
             <div className="projects">
                 <Button.Group color="primary" bordered className="projects_group">
                     <Project name="palera1n" />

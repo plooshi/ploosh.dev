@@ -1,3 +1,7 @@
 .projects_group {
     display: block;
 }
+
+#projects_title {
+    font-family: monospace;
+}
