@@ -4,13 +4,15 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import "@/styles/socials.css"
 import "@/styles/about.css"
 import "@/styles/projects.css"
+import "@/styles/background.css"
 
 const theme = createTheme({
     type: 'dark',
     theme: {
         colors: {
-            background: "$gray100",
-            accents7: "$gray700"
+            background: "$gray700",
+            accents7: "$gray900",
+            primary: "$white400"
         }
     }
 });
