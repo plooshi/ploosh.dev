@@ -7,10 +7,6 @@ interface ProjectType {
 }
 
 var projects : Object = {
-    "palera1n": {
-        description: "iOS 15.x-16.x jailbreak for checkm8 devices (A8-A11). I write the patches needed to boot the device jailbroken.",
-        url: "https://palera.in"
-    },
     "Dyld64Patcher": {
         description: "WIP patcher for dyld (dynamic linker) on iOS. I write the patches & the patching framework.",
         url: "https://github.com/plooshi/Dyld64Patcher"
