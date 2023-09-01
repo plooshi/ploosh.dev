@@ -60,8 +60,6 @@ export default function Projects() {
             <Text h3 id="projects_title">Projects</Text>
             <div className="projects">
                 <Button.Group color="primary" bordered className="projects_group">
-                    <Project name="palera1n" />
-                    <Spacer x={1} />
                     <Project name="Dyld64Patcher" />
                     <Spacer x={1} />
                     <Project name="plooshfinder" />
