@@ -1,15 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
-import { Icon } from 'astro-icon/components';
 import { differenceInYears } from 'date-fns';
 
-const linkButtonClasses="align-middle bg-[#0000002a] hover:bg-[#00000040] rounded-xl text-md transition-all duration-200 ease-in-out btn border-none z-[1]";
 ---
 
 
 <Layout title="Ploosh's website">
-	<main class="gradient-bg z-[-2]">
+	<main tabindex="0" class="gradient-bg z-[-2]">
 		<svg xmlns="http://www.w3.org/2000/svg" class="absolute">
 			<defs>
 			  <filter id="goo">
@@ -34,24 +32,24 @@ const linkButtonClasses="align-middle bg-[#0000002a] hover:bg-[#00000040] rounde
 			<div class="grow" />
 			<div class="space-x-2">
 				<div class="dropdown dropdown-hover dropdown-end">
-					<div class={linkButtonClasses} role="button" id="links">
-						<Icon name="ic:link" class="align-middle"></Icon>Links
+					<div tabindex="0" class="align-middle bg-[#0000002a] hover:bg-[#00000040] rounded-xl text-md transition-all duration-200 ease-in-out btn border-none z-[1]" role="button">
+						<span class="iconify ic--link align-middle"/>Links
 					</div>
-					<div class="dropdown-content pt-3">
+					<div tabindex="0" class="dropdown-content pt-3">
 						<ul class="menu bg-[#00000050] rounded-box z-[1] w-52 p-2">
 							<li>
 								<a href="https://discord.com/users/1247213229076250710" target="_blank" aria-label="Discord">
-									<Icon name="ic:baseline-discord" class="align-middle"></Icon>Discord
+									<span class="iconify ic--baseline-discord align-middle"/>Discord
 								</a>
 							</li>
 							<li>
 								<a href="https://github.com/plooshi" target="_blank" aria-label="GitHub">
-									<Icon name="mdi:github" class="align-middle"></Icon>GitHub
+									<span class="iconify mdi--github align-middle"/>GitHub
 								</a>
 							</li>
 							<li>
 								<a href="https://twitter.com/ploosh_ptr" target="_blank" aria-label="Twitter">
-									<Icon name="mdi:twitter" class="align-middle"></Icon>Twitter
+									<span class="iconify mdi--twitter align-middle"/>Twitter
 								</a>
 							</li>
 						</ul>
@@ -126,8 +124,8 @@ const linkButtonClasses="align-middle bg-[#0000002a] hover:bg-[#00000040] rounde
 	}
 	}
 	.gradient-bg {
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 100%;
 		position: absolute;
 		overflow: hidden;
 		background-color:hsla(0,100%,50%,1);

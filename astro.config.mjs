@@ -5,8 +5,6 @@ import cloudflare from '@astrojs/cloudflare';
 
 import tailwind from '@astrojs/tailwind';
 
-import icon from 'astro-icon';
-
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
@@ -18,5 +16,5 @@ export default defineConfig({
     imageService: "passthrough"
   }),
 
-  integrations: [tailwind(), icon()]
+  integrations: [tailwind()]
 });
