@@ -1,0 +1,233 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Image from 'astro/components/Image.astro';
+import { Icon } from 'astro-icon/components';
+import { differenceInYears } from 'date-fns';
+
+const linkButtonClasses="align-middle bg-[#0000002a] hover:bg-[#00000040] rounded-xl text-md transition-all duration-200 ease-in-out btn border-none z-[1]";
+---
+
+
+<Layout title="Ploosh's website">
+	<main class="gradient-bg z-[-2]">
+		<svg xmlns="http://www.w3.org/2000/svg" class="absolute">
+			<defs>
+			  <filter id="goo">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+				<feBlend in="SourceGraphic" in2="goo" />
+			  </filter>
+			</defs>
+		</svg>
+		<div class="gradients-container absolute z-[-2]">
+			<div class="g1 z-[-2]" />
+			<div class="g2 z-[-2]" />
+			<div class="g3 z-[-2]" />
+			<div class="g4 z-[-2]" />
+			<div class="g5 z-[-2]" />
+		</div>
+		<div class="flex rounded-xl p-2 px-4 bg-[#00000040]"> 
+			<div class="inline-flex space-x-4 select-none items-center">
+				<Image src="https://avatars.githubusercontent.com/u/56302322" width="40" height="40" alt="Avatar" class="rounded-lg" loading="eager" />
+				<p>Ploosh</p>
+			</div>
+			<div class="grow" />
+			<div class="space-x-2">
+				<div class="dropdown dropdown-hover dropdown-end">
+					<div class={linkButtonClasses} role="button" id="links">
+						<Icon name="ic:link" class="align-middle"></Icon>Links
+					</div>
+					<div class="dropdown-content pt-3">
+						<ul class="menu bg-[#00000050] rounded-box z-[1] w-52 p-2">
+							<li>
+								<a href="https://discord.com/users/1247213229076250710" target="_blank" aria-label="Discord">
+									<Icon name="ic:baseline-discord" class="align-middle"></Icon>Discord
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/plooshi" target="_blank" aria-label="GitHub">
+									<Icon name="mdi:github" class="align-middle"></Icon>GitHub
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/ploosh_ptr" target="_blank" aria-label="Twitter">
+									<Icon name="mdi:twitter" class="align-middle"></Icon>Twitter
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="absolute flex h-full w-full z-[-1] left-0 top-0">
+			<p class="m-auto px-10 text-center">Hi! I am { () => { let yrs = differenceInYears(new Date(), new Date(1281502800000)); return (((yrs >= 80 && yrs < 90) || yrs == 8 || yrs == 18) ? "an " : "a ") + yrs } } year old C++ and x64 assembly programmer from the United States. I make projects for stuff that I find interesting.</p>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		padding: 1rem;
+		width: 100%;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	:root {
+		--color-bg1: rgb(108, 0, 162);
+		--color-bg2: rgb(0, 17, 82);
+		--color1: 18, 113, 255;
+		--color2: 221, 74, 255;
+		--color3: 100, 220, 255;
+		--color4: 200, 50, 50;
+		--color5: 180, 180, 50;
+		--circle-size: 80%;
+		--blending: hard-light;
+		--anim-time: 50;
+		@media (prefers-reduced-motion) {
+			--anim-time: 200;
+		}
+
+	}
+
+	@keyframes moveInCircle {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+	}
+
+	@keyframes moveVertical {
+	0% {
+		transform: translateY(-50%);
+	}
+	50% {
+		transform: translateY(50%);
+	}
+	100% {
+		transform: translateY(-50%);
+	}
+	}
+
+	@keyframes moveHorizontal {
+	0% {
+		transform: translateX(-50%) translateY(-10%);
+	}
+	50% {
+		transform: translateX(50%) translateY(10%);
+	}
+	100% {
+		transform: translateX(-50%) translateY(-10%);
+	}
+	}
+	.gradient-bg {
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		overflow: hidden;
+		background-color:hsla(0,100%,50%,1);
+		background-image:
+			radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+			radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+			radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+			radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+			radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+			radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+			radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+		top: 0;
+		left: 0;
+		overflow: hidden;
+
+
+		.gradients-container {
+			filter: url(#goo) blur(20px);
+			width: 100%;
+			height: 100%;
+		}
+
+		.g1 {
+			position: absolute;
+			background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+			mix-blend-mode: var(--blending);
+
+			width: var(--circle-size);
+			height: var(--circle-size);
+			top: calc(50% - var(--circle-size) / 2);
+			left: calc(50% - var(--circle-size) / 2);
+
+			transform-origin: center center;
+			animation: moveVertical calc(var(--anim-time) * 1.5s) ease infinite;
+
+			opacity: 1;
+		}
+
+		.g2 {
+			position: absolute;
+			background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+			mix-blend-mode: var(--blending);
+
+			width: var(--circle-size);
+			height: var(--circle-size);
+			top: calc(50% - var(--circle-size) / 2);
+			left: calc(50% - var(--circle-size) / 2);
+
+			transform-origin: calc(50% - 400px);
+			animation: moveInCircle calc(var(--anim-time) * 1s) reverse infinite;
+
+			opacity: 1;
+		}
+
+		.g3 {
+			position: absolute;
+			background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+			mix-blend-mode: var(--blending);
+
+			width: var(--circle-size);
+			height: var(--circle-size);
+			top: calc(50% - var(--circle-size) / 2 + 200px);
+			left: calc(50% - var(--circle-size) / 2 - 500px);
+
+			transform-origin: calc(50% + 400px);
+			animation: moveInCircle calc(var(--anim-time) * 2s) linear infinite;
+
+			opacity: 1;
+		}
+
+		.g4 {
+			position: absolute;
+			background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+			mix-blend-mode: var(--blending);
+
+			width: var(--circle-size);
+			height: var(--circle-size);
+			top: calc(50% - var(--circle-size) / 2);
+			left: calc(50% - var(--circle-size) / 2);
+
+			transform-origin: calc(50% - 200px);
+			animation: moveHorizontal calc(var(--anim-time) * 2s) ease infinite;
+
+			opacity: 0.7;
+		}
+
+		.g5 {
+			position: absolute;
+			background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+			mix-blend-mode: var(--blending);
+
+			width: calc(var(--circle-size) * 2);
+			height: calc(var(--circle-size) * 2);
+			top: calc(50% - var(--circle-size));
+			left: calc(50% - var(--circle-size));
+
+			transform-origin: calc(50% - 800px) calc(50% + 200px);
+			animation: moveInCircle calc(var(--anim-time) * 1s) ease infinite;
+
+			opacity: 1;
+		}
+	}
+</style>
